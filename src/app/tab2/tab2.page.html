@@ -1,17 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title class="titulo"> Serviços </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="conteudo animate animate__animated animate__fadeInDown">
+  <ion-card (click)="oficinaAutomotiva()">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img 
+        src="https://st2.depositphotos.com/3079665/5667/v/950/depositphotos_56675303-stock-illustration-mechanic-with-circle-shape.jpg" 
+        />
+      </ion-thumbnail>
+        <ion-label>OficinaAutomotiva</ion-label>
+        <ion-label>Costuma realizar uma variedade de serviços mecânicos e elétricos, abrangendo desde reparos e manutenção básica até serviços mais complexos.</ion-label>
+    </ion-item>
+  </ion-card>    
+  <ion-card (click)="autoEletrica()">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img 
+        src="https://i.pinimg.com/originals/49/ff/4d/49ff4d62e02015b8311af4b10ec65616.jpg" 
+        />
+      </ion-thumbnail>
+        <ion-label>AutoElétrica</ion-label>
+        <ion-label>Especializada principalmente em sistemas elétricos do veículo, como bateria, alternador, sistema de ignição, luzes e fiação elétrica.</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="autoCenter()">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img 
+        src="https://th.bing.com/th/id/OIP.tBsteSfRabX5J53BLXInMAAAAA?pid=ImgDet&w=196&h=194&c=7&dpr=1,5" 
+        />
+      </ion-thumbnail>
+        <ion-label>AutoCenter</ion-label>
+        <ion-label>Geralmente oferece uma gama mais ampla de serviços, incluindo alinhamento, balanceamento, troca de óleo, serviços de suspensão, freios, pneus, entre outros.</ion-label>
+    </ion-item>
+  </ion-card>
+</div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>

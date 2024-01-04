@@ -1,17 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title class="titulo">Agendamentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="conteudo animate__animated animate__fadeInLeft">
+    <img
+      class="img-item"
+      src="https://th.bing.com/th/id/OIP.JwYwdwLZiM1hGlvpj1eZxwHaHa?pid=ImgDet&w=208&h=208&c=7&dpr=1,5"
+      alt="Imagem Solidariedade"
+    />
+    <p class="texto-item">
+      Esta precisando de ajuda? Podemos te ajudar! Preencha os campos e fale com
+      um Consultor. 🙏
+    </p>
+    <ion-button (click)="Whats()" expand="block" type="submit"
+      >Falar com Consultor</ion-button>
+  </div>
+  <form [formGroup]="form" (submit)="enviar()">
+    <ion-item>
+      <ion-label position="floating">Nome Completo</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label>
+      <ion-input type="text" formControlName="endereco"></ion-input>
+    </ion-item>
+    <ion-button
+      [disabled]="form.invalid"
+      expand="block"
+      type="submit"
+      >Salvar</ion-button
+    >
+  </form>
 </ion-content>

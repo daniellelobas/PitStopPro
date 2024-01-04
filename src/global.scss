@@ -24,3 +24,67 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.titulo{
+    text-align: center;
+}
+
+:root {
+    --ion-font-family: font-family: 'PT Serif', serif;
+    /* barra superior */
+    --ion-toolbar-background: #29065a;
+    --ion-toolbar-color: #fff100;
+    --ion-background-color: linear-gradient(180deg, #29065a 0%, #7314fd 100%);
+
+    /* barra inferior */
+    --ion-tab-bar-background: #29065a;
+    --ion-tab-bar-color: #44578a;
+    --ion-tab-bar-color-selected: #fff100;
+
+    --ion-text-color: white;
+    --ion-text-color-rgb: 255, 255, 255;
+
+    --ion-card-background: linear-gradient(139deg,#831affab 0%,transparent 100%);
+    -ion-item-background: transparent;
+    
+}
+
+.conteudo {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+ion-card {
+    border-radius: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+ion-card:hover{
+    transform: scale(1.03);
+}
+
+.img-item{
+    padding: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    max-width: 400px;
+
+    animation: animation-img- 4s infinite alternate;
+
+}
+ion-thumbnail{
+    animation: animation-img-item 4s infinite alternate;
+
+}
+
+@keyframes animation-img-item {
+    0% {
+        transform: translate(0px, 5px) scale(1) rotate(0deg) ;
+    }
+    100% {
+        transform: translate(0px, -5px) scale(0.5) rotate(45deg) ; 
+    }
+}
