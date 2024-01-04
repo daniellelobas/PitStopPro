@@ -1,0 +1,7 @@
+{
+  "name": "PitStopPro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
